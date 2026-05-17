@@ -21,12 +21,13 @@ header {
 
 main {
     margin: 0 auto;
-    width: 600px;
+    max-width: 600px;
 }
 
 h1 {
     text-align: center;
     margin: 15px 0;
+    color: aqua;
 }
 
 picture {
@@ -63,4 +64,36 @@ section h2 {
 
 section ul {
     margin-left: 20px;
+}
+
+nav a {
+    background-color: white;
+    text-decoration: none;
+    padding: auto;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+aside {
+    width: min-content;
+    margin: auto;
+    border: #d9d9d9;
+    padding: 0%;
+    background-color: #d9d9d9;
+    color: #d9d9d9;
+}
+
+aside img {
+    width: 200px;
+    height: auto;
+}
+
+p {
+    padding: 0%;
+}
+
+footer {
+    margin-top: auto;
+    border-top: beige;
+    text-align: center;
 }
