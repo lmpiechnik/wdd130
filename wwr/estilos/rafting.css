@@ -1,0 +1,128 @@
+
+
+
+/* Resetar CSS do meu projeto */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, sans-serif;
+}
+
+/* CABEÇALHO */
+
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px;
+}
+
+/* LOGO */
+header img{
+    width:180px;
+    height:auto;
+}
+
+/* MENU */
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:20px;
+}
+
+nav{
+    background:darkblue;
+    padding:15px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    padding:10px;
+}
+
+/* HERO */
+
+.hero{
+    position:relative;
+}
+
+.hero > img{
+    width:100%;
+    max-height:450px;
+    object-fit:cover;
+}
+
+.hero h1{
+    margin:20px 0;
+    color:darkblue;
+}
+
+/* imagem do artigo */
+article img{
+    width:300px;
+    height:auto;
+
+    display:block;
+    margin:20px auto;
+
+    float:none;
+}
+
+/* texto */
+
+p{
+    padding:10px 0;
+}
+
+/* redes sociais */
+
+.socialmedia{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+}
+
+.socialmedia img{
+    width:35px;
+}
+
+/* rodapé */
+
+footer{
+    text-align:center;
+    margin-top:30px;
+    border-top:1px solid #ccc;
+    padding:20px;
+}
+
+
+
+/* Seletores de Classe */
+
+.hero img {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    position: center;
+}
+
+
+
+.caixa {
+    border: 1px solid rgba(0 0 0 / 10%);
+    padding: 1rem;
+    margin: 1rem;
+    background-color: #ddd;
+    color: #000;
+}
+
+.indentacao {
+    padding-left: 2rem;
+}
