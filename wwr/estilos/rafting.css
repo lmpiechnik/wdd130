@@ -3,14 +3,21 @@
 
 /* Resetar CSS do meu projeto */
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+:root{
+    --primary-color:#0f4c81;
+    --secondary-color:#58a6ff;
+    --accent1-color:#ffffff;
+    --accent2-color:#222;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
 body{
-    font-family: Arial, sans-serif;
+    font-family:Arial,sans-serif;
 }
 
 /* CABEÇALHO */
@@ -25,7 +32,6 @@ header{
 /* LOGO */
 header img{
     width:180px;
-    height:auto;
 }
 
 /* MENU */
@@ -37,17 +43,20 @@ nav ul{
 }
 
 nav{
-    background:darkblue;
+    background:var(--primary-color);
     padding:15px;
 }
 
-nav a{
-    color:white;
-    text-decoration:none;
-    padding:10px;
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:20px;
 }
 
-/* HERO */
+nav a{
+    color:var(--accent1-color);
+    text-decoration:none;
+}
 
 .hero{
     position:relative;
@@ -60,19 +69,29 @@ nav a{
 }
 
 .hero h1{
-    margin:20px 0;
-    color:darkblue;
+    position:absolute;
+    top:20px;
+    width:100%;
+    text-align:center;
+    color:white;
 }
 
+.hero article{
+    position:absolute;
+    bottom:20px;
+    left:30px;
+    width:70%;
+    background:rgba(255,255,255,.8);
+    padding:15px;
+}
+
+
 /* imagem do artigo */
-article img{
-    width:300px;
-    height:auto;
 
-    display:block;
-    margin:20px auto;
-
-    float:none;
+.hero article img{
+    width:150px;
+    float:right;
+    margin-left:15px;
 }
 
 /* texto */
@@ -89,30 +108,22 @@ p{
     gap:20px;
 }
 
-.socialmedia img{
-    width:35px;
+.socialmedia{
+    display:flex;
+    justify-content:center;
+    gap:20px;
 }
 
 /* rodapé */
 
 footer{
     text-align:center;
-    margin-top:30px;
-    border-top:1px solid #ccc;
     padding:20px;
 }
 
 
 
 /* Seletores de Classe */
-
-.hero img {
-    width: 100%;
-    max-width: 800px;
-    height: auto;
-    position: center;
-}
-
 
 
 .caixa {
