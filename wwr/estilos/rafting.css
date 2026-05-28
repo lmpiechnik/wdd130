@@ -54,6 +54,11 @@ nav a{
     text-decoration:none;
 }
 
+nav a:hover{
+    background:var(--secondary-color);
+    color:var(--accent1-color);
+}
+
 .hero{
     position:relative;
 }
