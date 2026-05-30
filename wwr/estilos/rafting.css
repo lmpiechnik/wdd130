@@ -24,9 +24,13 @@ body{
 
 header{
     display:flex;
-    justify-content:space-between;
+    grid-template-columns: 400px 1fr 1fr;
+    justify-content: space-between;
     align-items:center;
-    padding:20px 500px;
+    padding:40px 100px;
+    color: #3d3b3b;
+    border:1px solid #3b3b3b;
+    
 }
 
 /* LOGO */
