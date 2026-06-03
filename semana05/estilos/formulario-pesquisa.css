@@ -1,0 +1,182 @@
+/*Reset e Configurações Globais */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  color: #333;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+header {
+  width: 100%;
+  max-width: 650px;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+}
+
+h1 {
+  margin: 1rem;
+  font-size: 1.5em;
+  color: navy;
+  text-align: center;
+}
+
+/* Formulário e Container Principal */
+
+form {
+  width: 100%;
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  background-color: #eee;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Grupos Fieldset e Legend */
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 1.5rem;
+}
+
+legend {
+  padding: 0 0.5rem;
+  color: navy;
+  font-size: 1.2em;
+}
+
+
+label, input, button, select, textarea {
+  font-family: Roboto, Arial, sans-serif;
+}
+
+label {
+  text-align: left;
+  padding-right: 1rem;
+}
+
+input, select, textarea {
+  padding: 0.5rem;
+  font-size: 1.1rem;
+}
+
+input[type="checkbox"] {
+  width: 22px;
+  height: 22px;
+  vertical-align: bottom;
+}
+
+/* Botão de Envio */
+button {
+  align-self: center;
+  background-color: navy;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.8rem 2rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #000066;
+}
+
+
+/* Rodapé */
+footer {
+  margin-top: 2rem;
+  width: 100%;
+  max-width: 650px;
+  text-align: center;
+  font-size: 0.9em;
+  color: #444;
+  border-top: 1px solid #ccc;
+  padding-top: 1rem;
+}
+
+.footer-note {
+  margin-top: 0.5rem;
+  font-size: 0.85em;
+  color: #777;
+}
+
+/* Itens do Formulário */
+
+.item-formulario {
+  display: grid;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Layout para as perguntas (Label maior, Input menor) */
+
+.coluna1 {
+  grid-template-columns: 3fr 1fr;
+}
+
+/* Estilo para labels de perguntas e checkbox que devem ser alinhados diferentemente */
+.coluna1 label {
+    text-align: left;
+}
+
+/* Layout de duas colunas (Label e Input) */
+
+.coluna2 {
+  grid-template-columns: 1fr 2fr;
+}
+
+.item-formulario-textarea {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+label {
+  text-align: left; /* Alinha o texto do label à direita para encontrar o input */
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  width: 100%;
+}
+
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  justify-self: start; /* Checkbox fica no início da sua coluna */
+}
+
+textarea {
+  height: 100px;
+  resize: vertical;
+}
