@@ -1,0 +1,282 @@
+/* Reset e Estilos Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    color: #000;
+}
+
+/* CABEÇALHO */
+header {
+    background-color: #d1c4e9; /* Roxo claro */
+    padding: 20px 0;
+    border-bottom: 1px solid #000;
+}
+
+.header-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo-placeholder {
+    width: 130px;
+    height: 120px;
+    background-color: #e0e0e0;
+    border: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-placeholder img {
+    max-width: 100%;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    border: 1px solid #000;
+    background-color: #fff;
+}
+
+nav ul li {
+    border-right: 1px solid #000;
+}
+
+nav ul li:last-child {
+    border-right: none;
+}
+
+nav ul li a {
+    display: block;
+    padding: 8px 15px;
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+}
+
+/* CONTEÚDO PRINCIPAL */
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+.address-info {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.address-info h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.address-info p {
+    margin: 2px 0;
+    font-size: 15px;
+}
+
+/* SEÇÃO DE CONTATO (MAPA + FORM) */
+.contact-section {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.map-container {
+    flex: 1;
+}
+
+.map-container img {
+    width: 100%;
+    border: 1px solid #ccc;
+    display: block;
+}
+
+.contact-form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-row {
+    display: flex;
+    align-items: center;
+}
+
+.form-row label {
+    width: 100px;
+    font-size: 14px;
+}
+
+.form-row input[type="text"],
+.form-row input[type="email"] {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #000;
+    border-radius: 4px;
+}
+
+/* Propósito da Mensagem */
+.purpose-row {
+    align-items: flex-start;
+}
+
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.radio-group label {
+    width: auto;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: normal;
+}
+
+/* Mensagem */
+.message-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+}
+
+.message-row label {
+    width: 100%;
+    font-weight: bold;
+}
+
+.message-row textarea {
+    width: 100%;
+    height: 80px;
+    padding: 8px;
+    border: 1px solid #000;
+    border-radius: 4px;
+}
+
+/* Newsletter e Botão */
+.newsletter-row label {
+    width: auto;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #e0e0e0;
+    border: 1px solid #000;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* SEÇÃO DE EQUIPE */
+.team-outer-box {
+    border: 1px solid #000;
+    padding: 20px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.team-outer-box h2 {
+    margin-bottom: 20px;
+    font-size: 22px;
+}
+
+.team-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.img-placeholder {
+    width: 120px;
+    height: 100px;
+    background-color: #e0e0e0;
+    border: 1px solid #ccc;
+    margin: 0 auto 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-placeholder img {
+    max-width: 80%;
+}
+
+.team-card p {
+    font-size: 14px;
+}
+
+/* RODAPÉ */
+footer {
+    background-color: #d1c4e9;
+    padding: 20px 0;
+    border-top: 1px solid #000;
+}
+
+.footer-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social-links {
+    display: flex;
+    gap: 10px;
+}
+
+.social-box {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    font-weight: bold;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+    .header-container, .contact-section, .team-container, .footer-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+    
+    nav ul {
+        flex-direction: column;
+    }
+    
+    nav ul li {
+        border-right: none;
+        border-bottom: 1px solid #000;
+    }
+    
+    .form-row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .form-row label {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+}
