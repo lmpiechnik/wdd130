@@ -136,16 +136,24 @@ header{
 }
 
 .contato-team-card {
-    width: 100px;
+    width: 180px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .contato-img-placeholder {
-    width:400%;
-    height:auto;
-    display:block;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.contato-img-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 .contato-footer-container {
@@ -247,101 +255,207 @@ header{
     margin-left:15px;
 }
 
-/* ================= CLASS - PÁGINA PASSEIO ================= */
+/* ================= PASSEIOS - GRID CRIATIVO ================= */
 
-
-
-
-.passeio-descritivo{
-    max-width: 1000px;
-    margin: 50px auto;
-    padding: 30px;
-    text-align: left;
+.passeios-section {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 20px;
+    text-align: center;
 }
 
-.passeio-descritivo h2,
-.passeio-descritivo p{
-    text-align: left;
+.passeios-section h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+    color: #1a1a2e;
+    position: relative;
 }
 
-.passeio-hero{
-    position:relative;
+.passeios-section h2::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(to right, #4facfe, #f093fb);
+    margin: 12px auto 0;
+    border-radius: 2px;
 }
 
-.passeio-hero > img{
-    width:100%;
-    height:500px;
-    object-fit:cover;
-    display:block;
+.passeios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 24px;
 }
 
-.passeio-hero h1{
-    position:absolute;
-    top:30px;
-    width:100%;
-    text-align:center;
-    color:white;
-    background:rgba(0,0,0,.5);
-    padding:15px;
-}
-
-.passeio-hero article{
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    right: 20px;
-
+/* CARD BASE */
+.passeio-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 28px 20px 24px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
     display: flex;
-    gap: 20px;
-
-    background: rgba(255,255,255,.85);
-    padding: 20px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
-.passeio-hero article img{
-    width: 30%;      /* ocupa 30% do espaço */
-    object-fit: cover;
+.passeio-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 32px rgba(0,0,0,0.12);
 }
 
-.passeio-hero article p{
-    width: 70%;      /* ocupa 70% do espaço */
-    margin: 0;
-    text-align: left;
+/* Faixa colorida no topo — cada nível tem sua cor */
+.passeio-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 6px;
 }
 
-/* ================= CLASS - PÁGINA INICIAL ================= */
+.nivel-iniciante1::before { background: #5bc0eb; }
+.nivel-iniciante2::before { background: #4facfe; }
+.nivel-experiente1::before { background: #f9ca24; }
+.nivel-experiente2::before { background: #f0932b; }
+.nivel-experiente3::before { background: #eb4d4b; }
 
-.inicial-hero{
-    position:relative;
+/* Badge da classe */
+.passeio-badge {
+    display: inline-block;
+    padding: 5px 16px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 16px;
+    color: #fff;
 }
 
-.inicial-hero > img{
-    width:100%;
-    height:700px;
-    object-fit:cover;
-    display:block;
+.nivel-iniciante1 .passeio-badge { background: #5bc0eb; }
+.nivel-iniciante2 .passeio-badge { background: #4facfe; }
+.nivel-experiente1 .passeio-badge { background: #f9ca24; color: #333; }
+.nivel-experiente2 .passeio-badge { background: #f0932b; }
+.nivel-experiente3 .passeio-badge { background: #eb4d4b; animation: pulse-badge 2s infinite; }
+
+@keyframes pulse-badge {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(235, 77, 75, 0.5); }
+    50%      { box-shadow: 0 0 0 8px rgba(235, 77, 75, 0); }
 }
 
-.inicial-hero h1{
-    position:absolute;
-    top:20px;
-    width:100%;
-    text-align:center;
-    color:white;
-    background:rgba(0,0,0,.5);
-    padding:5px;
-    margin: 0;
+.passeio-card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #1a1a2e;
 }
 
-.inicial-hero article{
-    position:absolute;
-    bottom:30px;
-    left:0px;
-    width:80%;
-    background:rgba(255,255,255,.8);
-    padding:20px;
-    
+.passeio-card p {
+    font-size: 13px;
+    color: #555;
+    line-height: 1.6;
+    flex-grow: 1;
+    margin-bottom: 16px;
 }
+
+/* Ondas de dificuldade */
+.passeio-dificuldade {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 14px;
+}
+
+.onda {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: #e0e0e0;
+    transition: all 0.3s;
+}
+
+.onda.on {
+    background: linear-gradient(135deg, #4facfe, #00f2fe);
+}
+
+.nivel-experiente1 .onda.on { background: linear-gradient(135deg, #f9ca24, #f0932b); }
+.nivel-experiente2 .onda.on { background: linear-gradient(135deg, #f0932b, #eb4d4b); }
+.nivel-experiente3 .onda.on {
+    background: linear-gradient(135deg, #eb4d4b, #c0392b);
+    animation: danger-glow 1.5s infinite alternate;
+}
+
+@keyframes danger-glow {
+    from { box-shadow: 0 0 4px #eb4d4b; }
+    to   { box-shadow: 0 0 12px #eb4d4b; }
+}
+
+/* Perigo */
+.passeio-perigo {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    color: #888;
+    background: #fafafa;
+    padding: 8px 12px;
+    border-radius: 8px;
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+.perigo-medio {
+    background: #fff3e0;
+    color: #e65100;
+}
+
+.perigo-alto {
+    background: #ffebee;
+    color: #c62828;
+    font-weight: 700;
+}
+
+.perigo-icone {
+    font-size: 16px;
+    flex-shrink: 0;
+}
+
+/* Botão */
+.passeio-card button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.3s;
+    color: #fff;
+}
+
+.nivel-iniciante1 button,
+.nivel-iniciante2 button { background: #4facfe; }
+.nivel-experiente1 button { background: #f9ca24; color: #333; }
+.nivel-experiente2 button { background: #f0932b; }
+.nivel-experiente3 button { background: #eb4d4b; }
+
+.passeio-card button:hover {
+    filter: brightness(1.1);
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+    .passeios-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+}
+
+
+
+
 
 
 
